@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.goldykhurmi.employeedirectory"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.goldykhurmi.employeedirectory"
+        }
+    },
+    "dependent_plugins": {}
+}
