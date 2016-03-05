@@ -141,12 +141,27 @@ showAlert: function (message, title) {
 
         var self = this;
 
+try{
+//Start work, bind the ids
+         window.baidupush.startWork("7733258", function(info){
+             self.showAlert(info, 'Info');
+        //success callback
+        //your code here
+         });
+}catch(e)
+{
+
+self.showAlert(e, 'Info');
+}
+
+
         this.detailsURL = /^#employees\/(\d{1,})/;
         self.registerEvents();
 
         this.store = new MemoryStore(function() {
            self.route();
         });
+
 
 /*document.addEventListener("deviceready", onDeviceReady, false);*/
 
