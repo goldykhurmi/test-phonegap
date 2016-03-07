@@ -27,7 +27,7 @@
     <gap:plugin name="org.apache.cordova.contacts" />
     <gap:plugin name="org.apache.cordova.camera" />
     <plugin name="cordova-plugin-baidupush" source="npm" />
-<script src="baidupush.js"></script>
+
 
     <plugin name="org.apache.cordova.camera" spec="0.3.6" source="pgb" />
   <!--  <plugin name="cordova-plugin-baidupush" />
