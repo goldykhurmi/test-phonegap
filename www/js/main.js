@@ -30,6 +30,10 @@ var app = {
 
 
 registerEvents: function() {
+
+
+document.addEventListener('deviceready', this.onDeviceReady, false);
+
     var self = this;
     // Check of browser supports touch events...
     if (document.documentElement.hasOwnProperty('ontouchstart')) {
@@ -52,8 +56,33 @@ registerEvents: function() {
 
     $(window).on('hashchange', $.proxy(this.route, this));
 
+    
 
 },
+
+onDeviceReady: function() {
+    var self = this;
+//alert('testning', 'Info1');
+try{
+//Start work, bind the ids app id 7733258 
+window.baidupush.startWork("etKEdklEG1iyFGOim3w0dQvB", function(info){
+   alert(JSON.stringify(info), 'InfoStart');
+        //success callback
+        //your code here
+    });
+}catch(e)
+{
+
+    alert(e.message, 'InfoStartWork');
+}
+
+
+
+},
+
+
+
+
 
 showAlert: function (message, title) {
   if (navigator.notification) {
@@ -74,10 +103,10 @@ showAlert: function (message, title) {
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
     }*/
     slidePage: function(page) {
- 
-    var currentPageDest,
+
+        var currentPageDest,
         self = this;
- 
+
     // If there is no current page (app just started) -> No transition: Position new page in the view port
     if (!this.currentPage) {
         $(page.el).attr('class', 'page stage-center');
@@ -85,10 +114,10 @@ showAlert: function (message, title) {
         this.currentPage = page;
         return;
     }
- 
+
     // Cleaning up: remove old pages that were moved out of the viewport
     $('.stage-right, .stage-left').not('.homePage').remove();
- 
+
     if (page === app.homePage) {
         // Always apply a Back transition (slide from left) when we go back to the search page
         $(page.el).attr('class', 'page stage-left');
@@ -98,9 +127,9 @@ showAlert: function (message, title) {
         $(page.el).attr('class', 'page stage-right');
         currentPageDest = "stage-left";
     }
- 
+
     $('body').append(page.el);
- 
+
     // Wait until the new page has been added to the DOM...
     setTimeout(function() {
         // Slide out the current page: If new page slides from the right -> slide current page to the left, and vice versa
@@ -109,7 +138,7 @@ showAlert: function (message, title) {
         $(page.el).attr('class', 'page stage-center transition');
         self.currentPage = page;
     });
- 
+
 },
 
 
@@ -117,7 +146,7 @@ showAlert: function (message, title) {
 
 
 
-    route: function() {
+route: function() {
     var self = this;
     var hash = window.location.hash;
     if (!hash) {
@@ -137,37 +166,29 @@ showAlert: function (message, title) {
     }
 },
 
-    initialize: function() {
+initialize: function() {
 
-        var self = this;
+    var self = this;
 
-try{
-//Start work, bind the ids
-         window.baidupush.startWork("7733258", function(info){
-             self.showAlert(info, 'Info');
-        //success callback
-        //your code here
-         });
-}catch(e)
-{
 
-self.showAlert(e, 'Info');
+    this.detailsURL = /^#employees\/(\d{1,})/;
+    self.registerEvents();
+
+
+
+
+
+
+    this.store = new MemoryStore(function() {
+     self.route();
+ });
+
+
+    /*document.addEventListener("deviceready", onDeviceReady, false);*/
+
+
+
 }
-
-
-        this.detailsURL = /^#employees\/(\d{1,})/;
-        self.registerEvents();
-
-        this.store = new MemoryStore(function() {
-           self.route();
-        });
-
-
-/*document.addEventListener("deviceready", onDeviceReady, false);*/
-
-
-
-    }
 };
 
 

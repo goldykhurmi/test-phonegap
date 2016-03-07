@@ -26,14 +26,18 @@
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.contacts" />
     <gap:plugin name="org.apache.cordova.camera" />
+    <plugin name="cordova-plugin-baidupush" source="npm" />
+<script src="baidupush.js"></script>
 
     <plugin name="org.apache.cordova.camera" spec="0.3.6" source="pgb" />
-    <plugin name="cordova-plugin-baidupush" />
+  <!--  <plugin name="cordova-plugin-baidupush" />
   <!--  <plugin name="cordova-plugin-contacts" spec="1.1.0" source="pgb" />
     <plugin name="Contacts" value="org.apache.cordova.ContactManager" />
     <feature name="Contacts">
         <param name="android-package" value="org.apache.cordova.contacts.ContactManager"/>
     </feature>
 -->
+    <allow-navigation href="http://*/*" />
+
     <access origin="*" browserOnly="true"/>
 </widget>
