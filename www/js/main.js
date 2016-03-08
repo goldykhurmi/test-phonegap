@@ -76,7 +76,11 @@ window.baidupush.startWork("etKEdklEG1iyFGOim3w0dQvB", function(info){
     alert(e.message, 'InfoStartWork');
 }
 
-
+//Listen notification arrived event, when a notification arrived, the callback function will be called
+window.baidupush.listenNotificationArrived(function(info){
+    //your code here
+     alert(JSON.stringify(info), 'Info Receive Notification');
+});
 
 },
 
