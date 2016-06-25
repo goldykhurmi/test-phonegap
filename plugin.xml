@@ -82,9 +82,9 @@
         <source-file src="src/android/com/xyz/plugins/baidupush/BaiduPushMessageReceiver.java" target-dir="src/com/xyz/plugins/baidupush" />
 
         <resource-file src="libs/pushservice-4.5.3.48.jar" target="libs/pushservice-4.5.3.48.jar" />
-        <resource-file src="libs/armeabi/libbdpush_V2_3.so" target="libs/armeabi/libbdpush_V2_3.so" />
-        <resource-file src="libs/armeabi-v7a/libbdpush_V2_3.so" target="libs/armeabi-v7a/libbdpush_V2_3.so" />
-        <resource-file src="libs/mips/libbdpush_V2_3.so" target="libs/mips/libbdpush_V2_3.so" />
+        <resource-file src="libs/armeabi/libbdpush_V2_6.so" target="libs/armeabi/libbdpush_V2_6.so" />
+        <resource-file src="libs/armeabi-v7a/libbdpush_V2_6.so" target="libs/armeabi-v7a/libbdpush_V2_6.so" />
+        <resource-file src="libs/mips/libbdpush_V2_6.so" target="libs/mips/libbdpush_V2_6.so" />
 
     </platform>
 
