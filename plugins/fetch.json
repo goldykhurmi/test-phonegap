@@ -5,6 +5,14 @@
             "id": "cordova-plugin-baidupush"
         },
         "is_top_level": true,
-        "variables": {}
+        "variables": { }
+    },
+    "cordova-plugin-background-app": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-background-app@^2.0.0"
+        },
+        "is_top_level": true,
+        "variables": { }
     }
 }
