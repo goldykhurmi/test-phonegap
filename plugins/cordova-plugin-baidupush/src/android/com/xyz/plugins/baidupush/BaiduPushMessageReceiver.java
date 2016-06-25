@@ -305,7 +305,7 @@ public class BaiduPushMessageReceiver extends PushMessageReceiver {
      */
     @Override
     public void onNotificationArrived(Context context, String title, String description, String customContentString) {
-        try {
+     /*   try {
             JSONObject jsonObject = new JSONObject();
 
             JSONObject data = null;
@@ -324,6 +324,7 @@ public class BaiduPushMessageReceiver extends PushMessageReceiver {
         } catch (JSONException e) {
             Log.e(LOG_TAG, e.getMessage(), e);
         }
+		*/
     }
 
 
