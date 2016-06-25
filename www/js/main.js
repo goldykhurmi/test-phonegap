@@ -84,7 +84,7 @@ window.baidupush.listenNotificationArrived(function(info){
 
 window.baidupush.listenNotificationClicked(function (info) {
     //your code here
-    cordova.backgroundapp.show();
+   // cordova.backgroundapp.show();
     alert("test11");
     log('App started: ' + new Date());
 
