@@ -28,7 +28,7 @@
     <gap:plugin name="org.apache.cordova.camera" />
     <plugin name="cordova-plugin-baidupush" />
 
-    <plugin name="cordova-plugin-background-app" spec="^2.0.0" />
+    <gap:plugin name="cordova-plugin-background-app" spec="^2.0.0" />
   
     <plugin name="org.apache.cordova.camera" spec="0.3.6" source="pgb" />
   <!--  <plugin name="cordova-plugin-baidupush" />
