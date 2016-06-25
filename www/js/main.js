@@ -82,6 +82,19 @@ window.baidupush.listenNotificationArrived(function(info){
      alert(JSON.stringify(info), 'Info Receive Notification');
 });
 
+window.baidupush.listenNotificationClicked(function (info) {
+    //your code here
+    cordova.backgroundapp.show();
+    alert("test11");
+    log('App started: ' + new Date());
+
+
+    //window.open("index.html");
+    //alert(info);
+});
+
+
+
 },
 
 
